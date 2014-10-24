@@ -1,0 +1,91 @@
+.crowdy {
+    position: relative;
+    background-color: #eee;
+}
+
+.crowdy_inner {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    font-weight: bold;
+    float: left;
+    color: white;
+    line-height: 2;
+    padding-left: 20px;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+
+.closed .crowdy_inner {
+  width: 100%;
+  background-color: #ccc;
+}
+
+.cool .crowdy_inner {
+  width: 33%;
+  background-color: #2ecc71;
+  -webkit-animation: cool 1s 1;
+          animation: cool 1s 1;
+}
+
+.medium .crowdy_inner {
+  width: 66%;
+  background-color: #e67e22;
+  -webkit-animation: cool 1s 1;
+          animation: cool 1s 1;
+}
+
+.hell .crowdy_inner {
+  width: 100%;
+  background-color: #e74c3c;
+  -webkit-animation: cool 1s 1;
+          animation: cool 1s 1;
+}
+
+@-webkit-keyframes cool {
+  0%   { width: 0; }
+  100% { width: 33%; }
+}
+@keyframes cool {
+  0%   { width: 0; }
+  100% { width: 33%; }
+}
+
+@-webkit-keyframes medium {
+  0%   { width: 0; }
+  100% { width: 66%; }
+}
+@keyframes medium {
+  0%   { width: 0; }
+  100% { width: 66%; }
+}
+
+@-webkit-keyframes hell {
+  0%   { width: 0; }
+  100% { width: 100%; }
+}
+@keyframes hell {
+  0%   { width: 0; }
+  100% { width: 100%; }
+}
+
+
+.closed .crowdy_inner:after {
+  content: "FERMÉ";
+}
+
+
+.cool .crowdy_inner:after {
+  content: "\\o/";
+}
+
+.medium .crowdy_inner:after {
+  content: "OUI ..MAIS BON ...NON";
+}
+
+.hell .crowdy_inner:after {
+  content: "NO WAY !";
+}

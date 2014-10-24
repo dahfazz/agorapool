@@ -1,0 +1,38 @@
+
+<ion-content>
+    <div class="list card">
+        <div class="item">
+            <div class="zipcode">{{pool.zipCode | reducedZipcode}}</div>
+            <div class="poolWrapper">
+                <h2 class="name">{{pool.name}}</h2>
+                <p class="address">{{pool.address}}</p>
+            </div>
+            <div class="distance">{{distance}}</div>
+        </div>
+
+        <div class="item item-button-right crowdy" ng-class="{'closed': crowd_level == 0, 'cool': crowd_level == 1, 'medium': crowd_level == 2, 'hell': crowd_level ==3}">
+            <div class="crowdy_inner"></div>
+        </div>
+        <div class="item item-button-right">
+            <b>TEL.</b> {{pool.phone}}
+            <a href="{{pool.phone}}" class="button button-positive">
+                <i class="icon ion-ios7-telephone"></i>
+            </a>
+        </div>
+        
+        <div class="item item-body" ng-click="showdesc = !showdesc">
+            <b>EN SAVOIR PLUS</b>
+        </div>
+        <div class="item item-body">
+            <p ng-if="showdesc" ng-bind-html="pool.description"></p>
+        </div>
+        
+
+        <div class="item tabs tabs-secondary tabs-icon-left" data-ng-class="{'open': isOpen, 'close': !isOpen}">
+            <b>AUJOURD'HUI</b> : {{from}} - {{until}}
+        </div>
+        <div class="item tabs tabs-secondary tabs-icon-left">
+            <b>DEMAIN</b> : {{tomorrowFrom}} - {{tomorrowUntil}}
+        </div>
+    </div>
+</ion-content>

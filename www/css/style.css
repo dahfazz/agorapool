@@ -1,0 +1,90 @@
+/* Empty. Add your own CSS if you like */
+.bar.bar-calm .title {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.zipcode {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #2c3e50;
+    line-height: 2.5;
+    border-radius: 50%;
+    background: #43cee6;
+    margin-right: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.zipcode:after {
+    content: 'e';
+    font-size: .7em;
+    vertical-align: super;
+}
+
+.poolWrapper {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.poolWrapper h2 {
+    font-size: 20px;
+}
+.poolWrapper p {
+    font-size: 20px;
+    color: #999;
+}
+
+.tabs.open {
+    color: #2ecc71;
+}
+
+.tabs.close {
+    color: #e74c3c;
+}
+
+.item-body * {
+    color: black;
+    font-weight: normal;
+}
+
+.item-body {
+}
+
+.bar-header .button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.burger {
+    width: 35px;
+    height: 35px;
+    display: block;
+    float: left;
+    background: white url('../img/burger.png') no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.distance {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 75px;
+    color: #000;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    padding-left: 20px;
+    background: url('../img/geoloc.png') left 23px no-repeat;
+}
+
+.distance:after {
+    content: 'Km';
+    font-weight: normal;
+    font-size: .8em;
+}

@@ -1,0 +1,23 @@
+<ion-content>
+    <label class="item item-input item-select">
+        <div class="input-label">Filtre</div>
+        <select ng-model="area">
+            <option value="">Arrondissement...</option>
+            <option ng-repeat="zip in zipcodes" value="750{{zip}}">750{{zip}}</option>
+        </select>
+    </label>
+
+    <label class="item item-input">
+        <input type="text" ng-model="search" placeholder="Recherche">
+    </label>
+    
+    <ion-list>
+        <ion-item ng-repeat="pool in pools | filter:area | filter:search | orderBy: 'zipCode'">
+            <div class="zipcode">{{pool.zipCode | reducedZipcode}}</div>
+            <a ng-click="open($event, {{pool.id}})" class="poolWrapper">
+                <h2>{{pool.name}}</h2>
+                <p>{{pool.address}}</p>
+            </a>
+        </ion-item>
+    </ion-list>
+</ion-content>
