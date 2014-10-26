@@ -3,7 +3,7 @@
 var fake = {
     'name': 'Ma piscine à boule',
     'zipCode': 75009,
-    'adress': '21, Jump Street',
+    'address': '21, Jump Street',
     'id': 000,
     'description': 'La meilleure piscine du Monde',
     'phone': '0142589874',

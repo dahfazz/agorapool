@@ -8,16 +8,16 @@
     </label>
 
     <label class="item item-input">
-        <input type="text" ng-model="search" placeholder="Recherche">
+        <input type="text" class="search" ng-model="search" placeholder="Recherche">
     </label>
     
     <ion-list>
-        <ion-item ng-repeat="pool in pools | filter:area | filter:search | orderBy: 'zipCode'">
+        <ion-item ng-click="open($event, {{pool.id}})" class="listItem" ng-repeat="pool in pools | filter:area | filter:search | orderBy: 'zipCode'">
             <div class="zipcode">{{pool.zipCode | reducedZipcode}}</div>
-            <a ng-click="open($event, {{pool.id}})" class="poolWrapper">
+            <div class="poolWrapper">
                 <h2>{{pool.name}}</h2>
                 <p>{{pool.address}}</p>
-            </a>
+            </div>
         </ion-item>
     </ion-list>
 </ion-content>
